@@ -1,5 +1,5 @@
 {
-    "name": "uniondrug/moduleLogMiddleware",
+    "name": "uniondrug/module-log-middleware",
     "description": "Uniondrug Module Log Middleware Component for uniondrug/framework",
     "keywords": [
         "phalcon",

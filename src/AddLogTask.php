@@ -21,6 +21,5 @@ class AddLogTask extends XTask
         $data = $this->data;
         //异步写入数据
         $this->logMiddlewareService->addLog($data);
-
     }
 }
