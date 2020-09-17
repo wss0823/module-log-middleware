@@ -1,0 +1,31 @@
+{
+    "name": "uniondrug/moduleLogMiddleware",
+    "description": "Uniondrug Module Log Middleware Component for uniondrug/framework",
+    "keywords": [
+        "phalcon",
+        "log",
+        "middleware"
+    ],
+    "license": "proprietary",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Uniondrug Dev Team",
+            "email": "dev@uniondrug.cn"
+        }
+    ],
+    "require": {
+        "uniondrug/framework": "^2.0",
+        "uniondrug/middleware": "^2.0",
+        "uniondrug/Phar": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uniondrug\\ModuleLogMiddleware\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
