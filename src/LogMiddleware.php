@@ -39,7 +39,7 @@ class LogMiddleware extends Middleware
     public function addLog(string $urlKeys)
     {
         //请求链ID
-        $requestId = $this->getSwoole()->getTrace()->getRequestId();
+        $requestId = $this->logMiddlewareService->getSwoole()->getTrace()->getRequestId();
         //请求地址
         $httpUrl = $this->request->getURI();
         //请求接口功能文本
