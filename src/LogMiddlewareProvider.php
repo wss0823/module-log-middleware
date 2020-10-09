@@ -5,9 +5,8 @@
  * Date: 2020-09-17
  * Time: 14:14
  */
-namespace Uniondrug\Middleware;
+namespace Uniondrug\ModuleLogMiddleware;
 
-use App\Middleware\LogMiddlewareService;
 use Phalcon\Di\ServiceProviderInterface;
 
 class LogMiddlewareProvider implements ServiceProviderInterface

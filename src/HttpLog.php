@@ -5,7 +5,7 @@
  * Date: 2020-09-17
  * Time: 16:13
  */
-namespace App\Middleware;
+namespace Uniondrug\ModuleLogMiddleware;
 
 use Phalcon\Mvc\Model\Behavior\Timestampable;
 use Uniondrug\Framework\Models\Model;

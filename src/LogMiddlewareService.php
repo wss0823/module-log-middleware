@@ -5,7 +5,7 @@
  * Date: 2020-09-17
  * Time: 14:19
  */
-namespace App\Middleware;
+namespace Uniondrug\ModuleLogMiddleware;
 
 use Uniondrug\Framework\Container;
 use Uniondrug\Framework\Services\Service;

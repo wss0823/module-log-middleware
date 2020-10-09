@@ -5,11 +5,13 @@
  * Date: 2020-09-07
  * Time: 15:08
  */
-namespace Uniondrug\Middleware;
+namespace Uniondrug\ModuleLogMiddleware;
 
 use App\Middleware\AddLogTask;
-use App\Middleware\LogMiddlewareService;
+
 use Phalcon\Http\RequestInterface;
+use Uniondrug\Middleware\DelegateInterface;
+use Uniondrug\Middleware\Middleware;
 
 /**
  * Class LogMiddleware

@@ -5,7 +5,7 @@
  * Date: 2020-09-17
  * Time: 14:01
  */
-namespace App\Middleware;
+namespace Uniondrug\ModuleLogMiddleware;
 
 use Uniondrug\Phar\Server\Tasks\XTask;
 
