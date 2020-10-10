@@ -46,6 +46,7 @@ class HttpLog extends Model
             'http_url' => 'httpUrl',
             'http_url_content' => 'httpUrlContent',
             'user_agent' => 'userAgent',
+            'ip' => 'ip',
             'request_body' => 'requestBody',
             'gmt_created' => 'gmtCreated',
             'gmt_updated' => 'gmtUpdated',

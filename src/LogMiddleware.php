@@ -7,7 +7,6 @@
  */
 namespace Uniondrug\ModuleLogMiddleware;
 
-
 use Phalcon\Http\RequestInterface;
 use Uniondrug\Middleware\DelegateInterface;
 use Uniondrug\Middleware\Middleware;
@@ -21,6 +20,31 @@ class LogMiddleware extends Middleware
 {
     public $httpUrl = "";
     protected $whiteList = null;
+
+    private function getHttpUrl()
+    {
+        return $this->request->getURI();
+    }
+
+    private function getRequestId()
+    {
+        return $this->logMiddlewareService->getSwoole()->getTrace()->getRequestId();
+    }
+
+    private function getRawBody()
+    {
+        return $this->request->getRawBody();
+    }
+
+    private function getUserAgent()
+    {
+        return $this->request->getUserAgent();
+    }
+
+    private function getClientAddress()
+    {
+        return $this->request->getClientAddress();
+    }
 
     public function handle(RequestInterface $request, DelegateInterface $next)
     {
@@ -40,20 +64,23 @@ class LogMiddleware extends Middleware
     public function addLog(string $urlKeys)
     {
         //请求链ID
-        $requestId = $this->logMiddlewareService->getSwoole()->getTrace()->getRequestId();
+        $requestId = $this->getRequestId();
         //请求地址
-        $httpUrl = $this->request->getURI();
+        $httpUrl = $this->getHttpUrl();
         //请求接口功能文本
         $httpUrlContent = $urlKeys;
         //请求入参
-        $requestBody = $this->request->getRawBody();
+        $requestBody = $this->getRawBody();
         //请求来源
-        $userAgent = $this->request->getUserAgent();
+        $userAgent = $this->getUserAgent();
+        //请求ip地址
+        $ip = $this->getClientAddress();
         $arr['requestId'] = $requestId;
         $arr['httpUrl'] = $httpUrl;
         $arr['httpUrlContent'] = $httpUrlContent;
         $arr['requestBody'] = $requestBody;
         $arr['userAgent'] = $userAgent;
+        $arr['ip'] = $ip;
         $this->logMiddlewareService->getSwoole()->runTask(AddLogTask::class, $arr);
     }
 
