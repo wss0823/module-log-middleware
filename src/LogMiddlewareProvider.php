@@ -14,7 +14,7 @@ class LogMiddlewareProvider implements ServiceProviderInterface
     public function register(\Phalcon\DiInterface $di)
     {
         $di->set(
-            'LogMiddlewareService',
+            'logMiddlewareService',
             function () {
                 return new LogMiddlewareService();
             }

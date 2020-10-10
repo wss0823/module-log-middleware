@@ -7,7 +7,6 @@
  */
 namespace Uniondrug\ModuleLogMiddleware;
 
-use App\Middleware\AddLogTask;
 
 use Phalcon\Http\RequestInterface;
 use Uniondrug\Middleware\DelegateInterface;
